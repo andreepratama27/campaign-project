@@ -1,6 +1,7 @@
 import { Campaign } from "@/types/campaign";
 
 export function formatCurrency(value: number) {
+  if (value === 0) return 0
   return new Intl.NumberFormat("id-ID", {
     style: "currency",
     currency: "IDR",

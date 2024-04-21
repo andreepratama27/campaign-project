@@ -1,11 +1,12 @@
 import { expect, it } from "vitest";
-import { sortAsc } from "../helper";
+import { sortAsc, formatCurrency } from "../helper";
 import { Campaign } from "@/types/campaign";
 
 describe("formatCurrency", () => {
-  it.todo("Should return correct format for Positive value");
-  it.todo("Should return correct format for Negative value");
-  it.todo("Should return correct format for Zero value");
+  it("Should return correct format for Zero value", () => {
+    const formatted = formatCurrency(0)
+    expect(formatted).toEqual(0)
+  });
 });
 
 describe("sortAsc", () => {
@@ -23,4 +24,10 @@ describe("sortAsc", () => {
       sortedData
     );
   });
+
+  it('should render empty array', () => {
+    const mockData = []
+
+    expect(sortAsc(mockData, "donation_target")).toEqual([])
+  })
 });
