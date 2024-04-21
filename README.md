@@ -1,8 +1,8 @@
 # Campaign Project
 
-This Project is created using Next JS. The reason is, I want to enable full SSR for this project, also want to get better performance instantly without needing to config or modify the project. For the styling mechanism, I combine SCSS & Tailwind CSS. Since this project is only have 3 days and need to be done as soon as possible, some of the component's style is using Tailwind CSS, and for a small component - I decide to use SCSS.
+This Project is created using Next JS. The reason is, I want to enable full SSR for this project, also want to get better performance instantly without needing to config or too much modifying the project. For the styling mechanism, I combine SCSS & Tailwind CSS. Since this project is only have 3 days and need to be done as soon as possible, some of the component's style is using Tailwind CSS, and for a small component - I decide to use SCSS.
 
-This project is running by PNPM
+This project is running by PNPM.
 
 ## Library & Tools
 
@@ -24,18 +24,18 @@ This project is running by PNPM
 
 - Project Structure
   I use Next JS App Router, with `src` directory for this project with `Domain Driven Design` approach. I put the file based on the context and purpose. The structure of the project looks like this:
-  ![alt text](https://https://github.com/andreepratama27/campaign-project/screenshots/project-directory.png)
+  ![alt text](https://github.com/andreepratama27/campaign-project/blob/main/screenshots/project-directory.png)
 
   I also use PNPM as package manager over npm or yarn, since it more disk efficient and faster also easy to use.
 
 - Data Fetching
-  I use `fetch` to fetching data from remote source. So we don't need to adding 3rd party library for this case. `window.fetch` is more than enough.
+  I use `fetch` to fetching data from remote source. So we don't need to adding 3rd party library for this case. `window.fetch` is more than enough. I put the fetcher in `service` folder inside `src` directory.
 
 - Stage Management
-  I use `zustand` for handling state-management. It lightweight, support SSR and easy to use & implement.
+  I use `zustand` for handling state-management. It lightweight, support SSR and easy to use & implement. For this case on this project, I use it to manage sorting functionality.
 
 - Testing Library
-  I use combination between `react-testing-library` & `vitest` since both of the library working fine and easy to config. Mainly, I use `vitest` for assertions. 
+  I use combination between `react-testing-library` & `vitest` since both of the library working fine each others and easy to config. Mainly, I use `vitest` for assertions. 
 
 ## Testing Mechanism
 
