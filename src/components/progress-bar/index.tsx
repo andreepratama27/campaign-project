@@ -10,6 +10,7 @@ export default function ProgressBar({ percentage }: Props) {
 
   return (
     <progress
+      data-testid="progress-bar"
       value={progressCount}
       max="100"
       className={cn("progress-bar", {

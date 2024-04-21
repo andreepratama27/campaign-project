@@ -5,7 +5,11 @@ import ProgressBar from "../progress-bar";
 
 export default function CampaignCard(campaignData: Campaign) {
   return (
-    <div key={campaignData.id} className="rounded border p-2">
+    <div
+      key={campaignData.id}
+      className="rounded border p-2"
+      data-testid="campaign-card"
+    >
       <div className="h-72 w-full bg-blue-100">
         <Image
           src={campaignData.image}
@@ -16,7 +20,9 @@ export default function CampaignCard(campaignData: Campaign) {
         />
       </div>
       <div className="title-wrapper py-4 text-sm">
-        <p className="font-semibold">{campaignData.title}</p>
+        <p className="font-semibold" data-testid="campaign-card-title">
+          {campaignData.title}
+        </p>
         <p className="font-mono pt-2">
           {formatCurrency(campaignData.donation_target)}
         </p>
