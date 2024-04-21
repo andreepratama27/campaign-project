@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Campaign Project
 
-## Getting Started
+This Project is created using Next JS. The reason is, I want to enable full SSR for this project, also want to get better performance instantly without needing to config or modify the project. For the styling mechanism, I combine SCSS & Tailwind CSS. Since this project is only have 3 days and need to be done as soon as possible, some of the component's style is using Tailwind CSS, and for a small component - I decide to use SCSS.
 
-First, run the development server:
+This project is running by PNPM
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Library & Tools
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- PNPM
+- Next JS
+- Typescript
+- Tailwind CSS
+- Zustand
+- Vitest
+- React Testing Library
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How to userun
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Architecture Explanation
 
-## Learn More
+- Project Structure
+  I use Next JS App Router, with `src` directory for this project. The structure of the project looks like this:
 
-To learn more about Next.js, take a look at the following resources:
+- Data Fetching
+  I use `fetch` to fetching data from remote source. So we don't need to adding 3rd party library for this case. `window.fetch` is more than enough.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Stage Management
+  I use `zustand` for handling state-management. It lightweight, support SSR and easy to use & implement.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Testing Library
+  I use combination between `react-testing-library` & `vitest` since both of the library working fine and easy to config. Mainly, I use `vitest` for assertions. 
 
-## Deploy on Vercel
+## Testing Mechanism
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+I create `__tests__` in every folder that need to be tested, included `non-component` folder. Although it looks messy, I found myself easy to find the correct test file when I need.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Improvement
+
+Since the time is limited, here the improvement that we can implement for next iteration:
+
+- [] Revamp Tailwind by using SCSS, using variable for theming
+- [] Adding Zod to validate API Response to prevent property changes from backend
+- [] Testing Coverage

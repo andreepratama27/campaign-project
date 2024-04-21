@@ -7,7 +7,6 @@ import { useStore } from "zustand";
 
 export default function CampaignWrapper({ data }: { data: Campaign[] }) {
   const { sortKey } = useStore(useSorting);
-  console.log("fff", data);
 
   return (
     <section className="container py-4">
