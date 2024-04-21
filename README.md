@@ -14,12 +14,19 @@ This project is running by PNPM
 - Vitest
 - React Testing Library
 
-## How to userun
+## How to run
+
+- Clone this project
+- Make sure you already installed node & npm in your terminal (you can check by running `npm -v` or `node -` in terminal)
+- Run `npm install` or `yarn install` or `pnpm install` (for this project, I prefer to use `pnpm`)
 
 ## Architecture Explanation
 
 - Project Structure
-  I use Next JS App Router, with `src` directory for this project. The structure of the project looks like this:
+  I use Next JS App Router, with `src` directory for this project with `Domain Driven Design` approach. I put the file based on the context and purpose. The structure of the project looks like this:
+  ![alt text](https://https://github.com/andreepratama27/campaign-project/screenshots/project-directory.png)
+
+  I also use PNPM as package manager over npm or yarn, since it more disk efficient and faster also easy to use.
 
 - Data Fetching
   I use `fetch` to fetching data from remote source. So we don't need to adding 3rd party library for this case. `window.fetch` is more than enough.
