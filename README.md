@@ -45,6 +45,6 @@ I create `__tests__` in every folder that need to be tested, included `non-compo
 
 Since the time is limited, here the improvement that we can implement for next iteration:
 
-- [] Revamp Tailwind by using SCSS, using variable for theming
-- [] Adding Zod to validate API Response to prevent property changes from backend
-- [] Testing Coverage
+- [ ] Revamp Tailwind by using SCSS, using variable for theming
+- [ ] Adding Zod to validate API Response to prevent property changes from backend
+- [ ] Testing Coverage
